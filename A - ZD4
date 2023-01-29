@@ -1,0 +1,15 @@
+x1 = int(input("Unesite prvu koordinatu na x osi: "))
+x2 = int(input("Unesite drugu koordinatu na x osi: "))
+y1 = int(input("Unesite prvu koordinatu na y osi: "))
+y2 = int(input("Unesite drugu koordinatu na y osi: "))
+from math import * 
+
+T1 = (x1, y1)
+T2 = (x2, y2)
+
+def udaljenost_tocaka(T1, T2):
+    D = sqrt((T1[0]-T2[0])**2+(T1[1]-T2[1])**2)
+    D = int(D)
+    return D
+
+print(udaljenost_tocaka(T1, T2))
