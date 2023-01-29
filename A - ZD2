@@ -1,0 +1,24 @@
+s = str(input("Unesite neki niz znakova: "))
+
+from string import *
+niz1 = []
+niz2 = []
+
+def alfanumericki(s):
+    for i in s:
+        if i in ascii_lowercase:
+            niz1.append(i)
+        elif i in ascii_uppercase:
+            niz1.append(i)
+        elif i.isdigit():
+            niz2.append(i)
+    
+    
+def main():
+    alfanumericki(s)
+    brojevi = len(niz2)
+    slova = len(niz1)
+
+    print("U zadnanom unosu ima ", slova, "slova i ", brojevi, "brojeva", )
+
+main()
