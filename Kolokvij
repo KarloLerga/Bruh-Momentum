@@ -1,0 +1,19 @@
+n = int(input("Unesite neki cijeli broj veći od 0: "))
+from random import *
+if n > 0:
+    niz1 = []
+    niz2 = []
+    for i in range(n):
+        niz1.append(randint(0,1))
+        niz2.append(randint(0,1))
+    prva = niz1.count(1)
+    druga = niz2.count(1)
+    
+    if prva > druga:
+        print("Niz s najviše jedinica je prvi niz: ", niz1)
+    elif druga > prva:
+        print("Niz s najviše jedinica je drugi niz: ", niz2)
+    else:
+        print("Oba niza imaju jednak broj jedinica!\n", niz1, niz2)
+else:
+    print("Broj koji ste unijeli je jednak ili manji od nule!")
