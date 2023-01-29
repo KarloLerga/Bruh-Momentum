@@ -1,0 +1,39 @@
+from random import *
+
+
+def manji_veci():
+    br = randint(1,10)
+    return br
+
+def main():
+    brojac = 0
+    pokusaji = 1
+    print("Ovaj program generira broj od 1 do 10")
+    print("Molim da odaberete broj 0 ukoliko mislite da je generirani broj <=5, a 1 ako mislite da je >5!")
+    print("Unesite broj 2 za izlaz iz programa!")
+    while brojac == 0:
+        gen = manji_veci()
+        print(str(pokusaji)+". pokušaj: ")
+        unos = int(input("Molim unesite broj 0 ili 1: "))
+        if unos == 0 or unos == 1:
+            if unos == 0 and gen <= 5:
+                print("Pogodak!", "Izvučen je broj:", gen)
+                brojac += 1
+                pokusaji += 1
+            elif unos == 1 and gen > 5:
+                print("Pogodak!", "Izvučen je broj:",gen)
+                brojac += 1
+                pokusaji += 1
+            elif unos == 0 and gen > 5:
+                print("Promašaj!", "Izvučen je broj:",gen)
+                pokusaji += 1
+            elif unos == 1 and gen <= 5:
+                print("Promašaj!", "Izvučen je broj:",gen)
+                pokusaji += 1
+        elif unos == 2:
+            print("Bok!")
+            break
+        else:
+            continue
+
+main()
