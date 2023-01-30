@@ -1,0 +1,24 @@
+def interpunkicja(s):
+    tocke = 0
+    zarezi = 0
+    dvotocke = 0
+    tockazarez = 0
+    for i in s:
+        if i == ".":
+            tocke += 1
+        elif i == ",":
+            zarezi += 1
+        elif i == ":":
+            dvotocke += 1
+        elif i == ";":
+            tockazarez += 1
+        else:
+            continue
+    return tocke, zarezi, dvotocke, tockazarez
+
+def main():
+    s = input("Unesite niz znakova: ")
+    interpunkicja(s)
+    print("U vašem unosu ima: "+str(interpunkicja(s)[0])+" točaka, "+ str(interpunkicja(s)[1]) + " zareza, "+ str(interpunkicja(s)[2])+" dvotočki i "+ str(interpunkicja(s)[3])+" točki-zareza!")
+
+main()
