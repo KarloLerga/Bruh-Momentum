@@ -1,0 +1,13 @@
+from math import *
+
+def udaljenost_od_ishodišta(t):
+    D = sqrt(t[0]**2 + t[1]**2)
+    D = int(D)
+    return D
+
+def main():
+    x, y = int(input("Unesite koordinatu x: ")), int(input("Unesite koordinatu y: "))
+    t = (x,y)
+    print("Točka je udaljena od ishodišta za: "+ str(udaljenost_od_ishodišta(t)) +" jedinica")
+
+main()
